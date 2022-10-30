@@ -1,0 +1,55 @@
+@startuml
+class city
+{
+    cityCode
+    cityName
+} 
+class resturant
+{
+    rescode
+    name
+    branCode
+
+}
+class branch
+{
+    branchCode
+    typeName
+    cityCode
+    name
+    location
+    phone
+    website
+    postalcode
+    address    
+}
+
+class menu
+{
+    menuCode
+    category
+    foodName
+    foodprice
+    priceUnit
+}
+
+class rate
+{
+    rateCode
+    branchCode
+    starsCount
+    comment
+}
+class workhours
+{
+    workCode
+    day
+    from
+    to
+}
+branch"0..*" -->city
+resturant"0..*" -->branch
+workhours"0..*" -->branch
+branch"0..*" -->rate
+branch"0..*" -->menu
+@enduml
