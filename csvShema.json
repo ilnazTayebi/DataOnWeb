@@ -1,0 +1,72 @@
+ {
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "resturant.csv",
+    "tableSchema": {
+         "columns": [{
+            "name": "rescode",
+            "titles": {
+                "en": "rescode"
+            },
+            "dc:description": {
+                "en": "The unique code of the resturant."
+            },
+            "datatype": "string",
+            "required": true
+        },
+		{
+            "titles": {
+                "en": "name"
+            },
+            "dc:description": "The unique name of the resturant.",
+            "datatype": "string"
+        },
+		
+		{
+            "titles": {
+                "en": "branchCode"
+            },
+            "dc:description": "The branch code of the resturant.",
+            "datatype": "string"
+        },
+		
+		{
+            "titles": {
+                "en": "cityCode"
+            },
+            "dc:description": "citycode",
+            "datatype": "string",
+            "required": true
+        },
+		
+		{
+            "titles": {
+                "en": "address"
+            },
+            "dc:description": "address of the resturant",
+            "datatype": "string"
+            
+        },
+		
+		{
+            "titles": {
+                "en": "phone"
+            },
+            "dc:description": "phone of the resturant",
+            "datatype": "string"
+            
+        }
+		,
+		
+		{
+            "titles": {
+                "en": "PostalCode"
+            },
+            "dc:description": "PostalCode of the resturant",
+            "datatype": "string"
+            
+        }
+		
+		],
+        "primaryKey": "rescode"
+    }
+}
