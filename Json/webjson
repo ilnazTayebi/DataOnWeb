@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/martinnec/course-data-on-the-web/main/lectures/04_formats_json/airport.schema.json",
+  "title": "resturant",
+  "description": "THIS IS RESTURANT",
+  "type": "object",
+  "properties": {
+    "rescode": {
+      "$ref": "#/$defs/rescode"
+    },
+    "name": {
+      "$ref": "#/$defs/name"
+    },
+    "branches": {
+      "type": "array",
+      "description": "This is branch code",
+      "items": {
+        "type": "object",
+        "properties": {
+          "branchcode": {
+            "type": "string",
+            "description": "This is branchcode"
+          },
+          "name": {
+            "$ref": "#/$defs/name"
+          },
+          "city": {
+            "type": "string",
+            "description": "This is branch city"
+          },
+          "address": {
+            "type": "string",
+            "description": "This is branch adress"
+          }
+        }
+      }
+    },
+    "adress": {
+      "type": "string "
+    },
+    "phone": {
+      "type": "string"
+    },
+    "postalcode": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rescode"
+  ],
+  "$defs": {
+    "rescode": {
+      "type": "string",
+      "title": "res code",
+      "description": "This is rescode "
+    },
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "This is name "
+    },
+    "adress": {
+      "type": "string",
+      "description": "This is adress "
+    },
+    "phone": {
+      "type": "string",
+      "properties": {
+        "rescode": {
+          "$ref": "#/$defs/rescode"
+        },
+        "name": {
+          "$ref": "#/$defs/name"
+        }
+      }
+    },
+    "postalcode": {
+      "type": "string"
+    }
+  }
+}

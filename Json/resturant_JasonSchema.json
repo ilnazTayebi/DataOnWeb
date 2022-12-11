@@ -1,0 +1,115 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/martinnec/course-data-on-the-web/main/lectures/04_formats_json/airport.schema.json",
+    "title": "resturant",
+    "description": "Resturant",
+    "type": "object",
+    "properties": {
+        "code": {
+            "$ref": "#/$defs/rescode"
+        },
+        "name": {
+            "$ref": "#/$defs/name"
+        },
+        "employment": {
+            "type": "array",
+            "description": "The yearly statistics of the number of employees.",
+            "items": {
+                "type": "object",
+                "description": "The employment statistics measuring the number of employees on the last day of the given year.",
+                "properties": {
+                    "year": {
+                        "type": "string",
+                        "description": "The year of the measurement."
+                    },
+                    "value": {
+                        "type": "integer",
+                        "description": "The measured value.",
+                        "exclusiveMinimum": 0
+                    }
+                },
+                "required": ["year","value"]
+            },
+            "minItems": 2
+        },
+        "departures": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "$ref": "#/$defs/number"
+                    },
+                    "time": {
+                        "$ref": "#/$defs/time",
+                        "title": "actual departure time",
+                        "description": "The actual time of the flight departure."
+                    },
+                    "to": {
+                        "$ref": "#/$defs/airport-base",
+                        "description": "The target destination airport of the flight."
+                    }
+                },
+                "required": ["number"]
+            }
+        },
+        "arrivals": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "$ref": "#/$defs/number"
+                    },
+                    "time": {
+                        "$ref": "#/$defs/time",
+                        "title": "actual arrival time",
+                        "description": "The actual time of the flight arrival."
+                    },
+                    "from": {
+                        "$ref": "#/$defs/airport-base",
+                        "description": "The origin airport of the flight."
+                    }
+                },
+                "required": ["number"]
+            }
+        }
+    },
+    "required": ["rescode"],
+    "$defs": {
+        "rescode": {
+            "type": "string",
+            "title": "Resturant code",
+            "description": "The unique code of the resturant.",
+            "minLength": 3,
+            "maxLength": 3
+        },
+        "name": {
+            "type": "string",
+            "title": "name",
+            "description": "The official name of the Resturant in english."
+        },
+        "branchCode": {
+            "type": "string",
+            "description": "The branch code of the resturant."
+        },
+        "cityCode": {
+            "type": "string",
+            "description": "cityCode"
+            
+        },
+        "address": {
+            "type": "string",
+            "description": "address"
+        },
+		"phone": {
+            "type": "string",
+            "title": "phone",
+            "description": "phone of the resturant."
+        },
+        "PostalCode": {
+            "type": "string",
+            "description": "PostalCode of the resturant."
+        }
+		}
+}

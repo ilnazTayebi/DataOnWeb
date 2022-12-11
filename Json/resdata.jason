@@ -1,0 +1,25 @@
+{
+  "rescode": "Re123",
+  "name": "Wirtshaus Altes Brauhaus",
+  "branches": [
+    {
+      "branchcode": "1",
+      "name": "branchone",
+      "city": "",
+      "address": ""
+    }
+  ],
+  "cities": [
+    {
+      "citycode": "1",
+      "cityname": "munich"
+    },
+    {
+      "citycode": "2",
+      "cityname": "passau"
+    }
+  ],
+  "adress": "Brugasse 5",
+  "phone": "04908514905252",
+  "postalcode": "94032"
+}

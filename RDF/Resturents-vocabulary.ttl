@@ -1,0 +1,75 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rxv: <https://cu.opendata.cz/course-data-on-the-web/vocabulary/resturants/> .
+@prefix otherv: <https://cu.opendata.cz/course-data-on-the-web/vocabulary/machines/> .
+@prefix schema: <http://schema.org/> .
+
+rxv:resturant a rdfs:Class ;
+  rdfs:subClassOf schema:resturants ;
+  rdfs:label "German resturants"@en ;
+  rdfs:comment "A resturant in Germany."@en .
+  
+  
+exv:rescode a rdf:Property ;
+  rdfs:subPropertyOf schema:rescode ;
+  rdfs:label "Resturant rescode"@en ;
+  rdfs:domain rxv:resturant ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The unique identifier for a Resturant"
+  
+exv:name a rdf:Property ;
+  rdfs:subPropertyOf schema:name ;
+  rdfs:label "Resturant name"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Name of the resturant"
+  
+exv:branchCode a rdf:Property ;
+  rdfs:subPropertyOf schema:branchCode ;
+  rdfs:label "Resturant branchCode"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "branchCode of the resturant"
+   
+exv:rescode a rdf:Property ;
+  rdfs:subPropertyOf schema:rescode ;
+  rdfs:label "Resturant rescode"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""
+ 
+   
+exv:cityCode a rdf:Property ;
+  rdfs:subPropertyOf schema:cityCode ;
+  rdfs:label "Resturant cityCode"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "cityCode"
+  
+    
+exv:address a rdf:Property ;
+  rdfs:subPropertyOf schema:address ;
+  rdfs:label "Resturant address"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "address of the resturant"
+  
+    
+exv:phone a rdf:Property ;
+  rdfs:subPropertyOf schema:phone ;
+  rdfs:label "Resturant phone"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "phone of the resturant"
+  
+    
+exv:PostalCode a rdf:Property ;
+  rdfs:subPropertyOf schema:PostalCode ;
+  rdfs:label "Resturant PostalCode"@en ;
+  rdfs:domain rxv:resturants ;
+  rdfs:range xsd:string ;
+  rdfs:comment "PostalCode of the resturant"
+  
+ 
